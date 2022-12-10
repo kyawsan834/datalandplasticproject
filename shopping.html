@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping</title>
+
+    <!-- ========== normalize css ========== -->
+    <link href="vendors/css/normalize.css" rel="stylesheet" type="text/css" />
+
+    <!-- ========== grid css ========== -->
+    <link href="vendors/css/grid.css" rel="stylesheet" type="text/css" />
+
+    <!-- ========== fontawesome css ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+    <!-- custom css  -->
+    <link href="./resources/css/shopping-style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+    <!-- NAV ---------------- -->
+    <nav class="nav">
+
+        <a href="main.html" class="nav-logo">Grow++Fresh</a>
+
+        <ul class="navbar">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="shopping.html" class="nav-link active">shopping</a>
+            </li>
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="./newspage.html" class="nav-link">news</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">about</a>
+            </li>
+
+            <div class="cart-icon">
+                <span class="quantity">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path d="M551.991 64H129.28l-8.329-44.423C118.822 8.226
+                           108.911 0 97.362 0H12C5.373 0 0 5.373 0 12v8c0 6.627
+                           5.373 12 12 12h78.72l69.927 372.946C150.305 416.314
+                           144 431.42 144 448c0 35.346 28.654 64 64 64s64-28.654
+                           64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681
+                           0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654
+                           64-64 0-17.993-7.435-34.24-19.388-45.868C506.022 391.891
+                           496.76 384 485.328 384H189.28l-12-64h331.381c11.368 0
+                           21.177-7.976 23.496-19.105l43.331-208C578.592 77.991
+                           567.215 64 551.991 64zM240 448c0 17.645-14.355 32-32 
+                           32s-32-14.355-32-32 14.355-32 32-32 32 14.355 32 32zm224
+                           32c-17.645 0-32-14.355-32-32s14.355-32 32-32 32 14.355
+                           32 32-14.355 32-32 32zm38.156-192H171.28l-36-192h406.876l-40
+                           192z" />
+                </svg>
+
+            </div>
+            <div class="products-list hide">
+                <ul>
+                    <li class="list-title">
+                        <h4>product</h4>
+                        <h4>name</h4>
+                        <h4>price</h4>
+                        <h4>qty</h4>
+                        <h4>total</h4>
+                        <h4></h4>
+                    </li>
+                    <div class="list-container">
+                        <li class="list-msg">Your Cart is empty</li>
+                        <!-- <li class="list">
+                            <img src="./img/products/wood/slotted-serving-spoon.png" alt="" />
+                            <h4>slotted serving spoon</h4>
+                            <p class="sg-price">$14.99</p>
+                            <input type="number" name="" id="" value="1" />
+                            <p class="multi-price">$0.00</p>
+                            <button class="btn-remove"></button>
+                        </li>
+                        <li class="list">
+                            <img src="./img/products/wood/slotted-serving-spoon.png" alt="" />
+                            <h4>slotted serving spoon</h4>
+                            <p class="sg-price">$14.99</p>
+                            <input type="number" name="" id="" value="1" />
+                            <p class="multi-price">$0.00</p>
+                            <button class="btn-remove"></button>
+                        </li>
+                        <li class="list">
+                            <img src="./img/products/wood/slotted-serving-spoon.png" alt="" />
+                            <h4>slotted serving spoon</h4>
+                            <p class="sg-price">$14.99</p>
+                            <input type="number" name="" id="" value="1" />
+                            <p class="multi-price">$0.00</p>
+                            <button class="btn-remove"></button>    
+                        </li> -->
+                    </div>
+                    <li class="list-total">
+                        <p class="qty">0</p>
+                        <h3 class="total">$0.00</h3>
+                    </li>
+                    <li class="btn-purchase"><a href="./formdesign.html">Purchase</a></li>
+                </ul>
+            </div>
+            <a href="./donationformedited.html" class="btn-donate" target="_blank">donate</a>
+
+        </ul>
+    </nav>
+    <!-- NAV ---------------- -->
+
+
+    <!-- TITLE ---------------- -->
+    <div class="title-container">
+        <div class="wrapper"></div>
+        <h1>Alternative products of <span class="color-green">plastic</span></h1>
+    </div>
+    <!-- TITLE ---------------- -->
+
+
+    <!-- PRODUCTS ---------------- -->
+    <div class="products-container">
+        <ul class="products-filter">
+            <a href="#!" class="category" autofocus>all</a>
+            <a href="#!" class="category">wood</a>
+            <a href="#!" class="category">cloth</a>
+            <a href="#!" class="category">steel</a>
+            <a href="#!" class="category">bioplastic</a>
+            <a href="#!" class="category">silicon</a>
+        </ul>
+
+        <div class="products">
+            <div class="product">
+                <img src="./img/products/wood/slotted-serving-spoon.png" alt="" />
+                <span class="add-to-cart-btn"></span>
+                <h4>slotted serving spoon</h4>
+                <p>$14.99</p>
+                <span class="bg"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/cloth/Upcycled-Cotton-Napkins.png" alt="" />
+                <h4>Upcycled Cotton Napkins</h4>
+                <p>$14.99</p>
+                <!-- <span class="bg"></span> -->
+                <span class="add-to-cart-btn"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/silicon/silicon-bottle-2.png" alt="" />
+                <h4>bottle</h4>
+                <p>$9.99</p>
+                <span class="bg"></span>
+                <span class="add-to-cart-btn"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/steel/brushed-stainless-bottle.png" alt="" />
+                <h4>brushed stainless bottle</h4>
+                <p>$3.99</p>
+                <!-- <span class="bg"></span> -->
+                <span class="add-to-cart-btn"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/bioplastic/packaging-bag.png" alt="" />
+                <h4>packaging bag</h4>
+                <p>$2.99</p>
+                <!-- <span class="bg"></span> -->
+                <span class="add-to-cart-btn"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/wood/tongs.png" alt="" />
+                <h4>tongs</h4>
+                <p>$8.49</p>
+                <!-- <span class="bg"></span> -->
+                <span class="add-to-cart-btn"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/steel/Ekobo-cups.png" alt="" />
+                <h4>Ekobo cups</h4>
+                <p>$7.45</p>
+                <!-- <span class="bg"></span> -->
+                <span class="add-to-cart-btn"></span>
+            </div>
+            <div class="product">
+                <img src="./img/products/silicon/silicon-toilet-brush-2.png" alt="" />
+                <h4>toilet brush</h4>
+                <p>$7.33</p>
+                <!-- <span class="bg"></span> -->
+                <span class="add-to-cart-btn"></span>
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCTS ---------------- -->
+
+    <!-- ALERT ---------------- -->
+    <div class="alert-box-container">
+
+    </div>
+    <!-- ALERT ---------------- -->
+
+
+    <footer>
+        <div class="footer-col-1 footer-columns">
+            <h3>Top Products</h3>
+            <ul>
+                <li>
+                    <a href="./resources/img/footer product item1.webp">Bio Plastic</a>
+                </li>
+                <li>
+                    <a href="./resources/img/footer product item2.webp">Cloth</a>
+                </li>
+                <li>
+                    <a href="./resources/img/footer product item3.webp">Silicon</a>
+                </li>
+                <li>
+                    <a href="./resources/img/footer product item4.webp">Steel</a>
+                </li>
+
+                <li>
+                    <a href="./resources/img/footer product item5.webp">Wood</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col-2 footer-columns">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>
+                    <a href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="#shopping">shopping</a>
+                </li>
+                <li>
+                    <a href="#news">news</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog</a>
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col-3 footer-columns">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Reseller</a>
+                </li>
+                <li>
+                    <a href="#">PR & Press</a>
+                </li>
+                <!-- <li>
+                    <a href="#">Item 4</a>
+                </li>
+                <li>
+                    <a href="#">Item 5</a>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="footer-col-4 footer-columns">
+            <h3>Terms & Conditions</h3>
+            <ul>
+                <li>
+                    <a href="#">Privacy policy and commitment</a>
+                </li>
+                <li>
+                    <a href="#">Cookes</a>
+                </li>
+                <li>
+                    <a href="#">Returns policy</a>
+                </li>
+                <li>
+                    <a href="#">Legal information</a>
+                </li>
+                <!-- <li>
+                    <a href="#">Item 5</a>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="footer-col-5 footer-columns">
+            <h3>Subscribe Us</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <div class="subscribe-form">
+                <input type="text " name="" id="" class="" placeholder="Enter your e-mail address" autocomplete="none">
+                <a href="#" class="subscribe-btn"> Subscribe</a>
+            </div>
+        </div>
+
+        <div class="wdf-batch5">
+            <p>2022 Developed by WDF-Batch(5),DLT Students. (1H Group)</p>
+
+            <div class="contact-icons">
+
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class=" fab fa-linkedin-in "></i>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Data Js -->
+    <script src="./resources/js/data.js" type="text/javascript"></script>
+
+
+    <!-- shopping js -->
+    <script src="./resources/js/shopping-app.js" type="text/javascript"></script>
+
+</body>
+
+</html>

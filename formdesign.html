@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>Form Design</title>
+    <link href="./resources/css/formdesign.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="wrapper">
+
+            <form method="" action="">
+
+                <button class="btn1"><a href="./shopping.html">Return to store</a></button>
+
+                <h1>Payment</h1>
+
+                <div>
+                    <div class="input_group">
+
+                        <div class="input_box">
+                            <span>Name On Card</span>
+                            <input type="text" name="card" id="card" class="" placeholder="Enter Your Name..." required>
+                        </div>
+                    </div>
+
+
+                    <div class="input_group">
+                        <div class="input_box">
+                            <span>Email Address</span>
+                            <input type="email" name="email" id="email" class="" placeholder="Enter Your Email...">
+                        </div>
+                    </div>
+
+
+                    <div class="input_group">
+                        <div class="input_box">
+                            <span>Address</span>
+                            <input type="text" name="adress" id="" class="" placeholder="Enter Your Address...">
+                        </div>
+                    </div>
+
+
+                    <div class="input_group">
+                        <div class="input_box">
+                            <span>Country</span>
+                            <select id="country" class="country">
+								<option>Myanmar</option>
+								<option>Singapore</option>
+								<option>Sweden</option>
+								<option>Thailand</option>
+								<option>Japan</option>
+							</select>
+                        </div>
+                    </div>
+
+
+                    <div class="input_group">
+                        <div class="input_box">
+
+                            <h4>Choose Payment Method Below</h4>
+
+                            <input type="radio" name="pay" id="" class="radio" placeholder="Credit Card" checked>
+                            <label>
+								<span>
+									<i class="fab fa-cc-visa"></i>Credit Card
+								</span>
+							</label>
+
+                            <input type="radio" name="paypal" id="" class="radio" placeholder="Paypal">
+                            <label>
+								<span>
+									<i class="fab fa-cc-paypal"></i>Paypal
+								</span>
+							</label>
+                        </div>
+                    </div>
+
+                    <div class="pay_group">
+                        <div class="pay_box">
+                            <i class="fas fa-credit-card"></i>
+                            <input type="text" name="cardno" id="" class="" placeholder="Card Number xxxx-xxxx-xxxx-xxxx" required>
+                        </div>
+                    </div>
+
+                    <div class="pay_group">
+                        <div class="pay_box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="cvc" id="" class="" placeholder="Card CVC xxx" required>
+                        </div>
+                    </div>
+
+                    <div class="pay_group">
+                        <div class="pay_box">
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" name="expm" id="" class="" placeholder="Exp Month">
+                        </div>
+
+                        <div class="pay_box">
+                            <i class="far fa-calendar"></i>
+                            <input type="text" name="expy" id="" class="" placeholder="Exp Year">
+                        </div>
+                    </div>
+
+                    <button type="submit" name="submit" id="submit" class="btn2">Submit And Pay</button>
+
+
+            </form>
+
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>

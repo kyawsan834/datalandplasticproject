@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay&family=Raleway&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cambay', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* 
+	MENU
+	===================================
+	1.NAV
+	2.ABOUT
+	3.TEAM
+	4.MEMBERS 
+*/
+
+
+/* NAV 
+   ========================================*/
+
+.nav,
+.navbar {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    /* margin: auto; */
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar {
+    width: 60%;
+    list-style: none;
+    /* background-color: rgb(182, 199, 255); */
+    justify-content: space-between;
+}
+
+.nav .active {
+    font-weight: bold;
+    color: #529488;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    letter-spacing: 1px;
+    font-size: 80%;
+    font-weight: normal;
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #529488;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right bottom;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    /* transition: transform 0.3s ease-in-out; */
+    transform-origin: left bottom;
+}
+
+.nav-link:hover {
+    color: #529488;
+    font-weight: bold;
+}
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.cart-icon>.quantity {
+    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: #529488;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -7.5px;
+    right: -7.5px;
+}
+
+.cart-icon>svg {
+    cursor: pointer;
+}
+
+.btn-donate {
+    width: 126px;
+    height: 38px;
+    background-color: #529488;
+    color: #fff;
+    letter-spacing: 1.3px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 5px;
+}
+
+
+/* NAV 
+   ========================================*/
+
+
+/* ABOUT
+   ========================== */
+
+.about-container {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 40% 40%;
+    grid-gap: 50px;
+}
+
+.about-container img {
+    width: 100%;
+}
+
+.about-container h1 {
+    text-transform: uppercase;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 170%;
+}
+
+
+/* ABOUT
+   ========================== */
+
+
+/* TEAM
+   ========================== */
+
+.team-container {
+    height: 320px;
+    background-color: #529488;
+    color: #fff;
+    display: grid;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 30% 55%;
+}
+
+.team-container>h1 {
+    font-family: Raleway, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-container>p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 190%;
+    letter-spacing: 1px;
+}
+
+
+/* TEAM
+   ========================== */
+
+
+/* MEMBERS
+   ========================== */
+
+.members-container,
+.member {
+    display: grid;
+}
+
+.members-container {
+    width: 100%;
+    /* display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: columns; */
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-rows: repeat(7, auto);
+}
+
+.member {
+    width: 70%;
+    /* height: 300px; */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 50px 0;
+}
+
+.member:nth-child(1) {
+    border-top: none;
+}
+
+.member:nth-child(even) .detail>* {
+    text-align: right;
+}
+
+.member .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member .pp {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.member .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, #dbdbdb);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.member .social-icons {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.member .social-icons>* {
+    margin: 7px 0;
+}
+
+.member svg {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.member .fb:hover svg {
+    fill: #1778f2;
+}
+
+.member .ig:hover svg {
+    fill: #bc2a8d;
+}
+
+.member .tw:hover svg {
+    fill: #1da1f2;
+}
+
+.member img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* transform:scale(1.2); */
+    transition: all ease-in-out 0.2s;
+}
+
+.member .pp:hover img {
+    transform: scale(1.2);
+}
+
+.profile:hover .social-icons {
+    opacity: 1;
+    /* background-color:green; */
+}
+
+.member .detail>* {
+    margin: 5px 0;
+}
+
+.member .detail h2,
+.member .detail h4 {
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.member h2 {
+    color: #529488;
+}
+
+.member h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.member p {
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+
+/* MEMBERS
+   ========================== */
+
+
+/* ========== button group ========== */
+
+.subscribe-btn:link,
+.subscribe-btn:visited {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border: 1px solid #529488;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 80%;
+    letter-spacing: 2px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:active {
+    background-color: #529488;
+    color: #fff;
+}
+
+
+/* =============== footer section ============== */
+
+footer {
+    padding: 5%;
+    height: 85%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-columns {
+    padding-bottom: 40px;
+}
+
+footer h3 {
+    color: #fff;
+    padding-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 10px 0px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    transition: all 0.3s;
+}
+
+footer li a:hover {
+    color: #529488;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer input {
+    width: 265px;
+    padding: 15px 12px;
+    background-color: #529488;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+footer input::placeholder {
+    color: #fff;
+}
+
+footer input:focus {
+    border: 2px solid #fff;
+}
+
+footer .subscribe-form {
+    margin-top: 25px;
+}
+
+footer .wdf-batch5 {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .wdf-batch5 p {
+    font-size: 100%;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+}
+
+footer .wdf-batch5 .contact-icons {
+    margin-top: 0px;
+}
+
+footer .wdf-batch5 .contact-icons i {
+    margin: 0px 5px;
+    padding: 10px 15px;
+    font-size: 95%;
+    color: rgb(184, 184, 184);
+    border: 1px solid #529488;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+footer .wdf-batch5 .contact-icons i:hover {
+    background-color: #529488;
+    color: #fff;
+}
